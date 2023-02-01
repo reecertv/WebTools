@@ -28,8 +28,8 @@ jobs:
     - name: Publish .NET Core Project
       run: dotnet publish ReecerTV_Homepage.csproj -c:Release -p:GHPages=true -o dist/Web --nologo
       
-    - name: Commit wwwroot to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@3.7.1
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4.4.1
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
